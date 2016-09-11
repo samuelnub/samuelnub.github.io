@@ -1,0 +1,17 @@
+body
+{
+    text-align: center;
+    background: url("http://img03.deviantart.net/15d1/i/2015/361/e/2/mountain_by_samuelyap-d9lmyon.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    color: white;
+    font-family: 'Segoe UI';
+};
+
+img
+{
+    border-radius: 128px;
+    box-shadow: 0px 8px 8px rgba(0,0,0,0.5);
+}
