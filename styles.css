@@ -22,7 +22,7 @@ body
     0%
     {
         opacity: 0;
-        transform: translateY(512px);
+        transform: translateY(-512px);
     }
 
     100%
@@ -36,6 +36,7 @@ img
 {
     border-radius: 128px;
     box-shadow: 0px 8px 8px rgba(0,0,0,0.5);
+    transition: all 0.2s ease-in-out;
 }
 
 img:hover
