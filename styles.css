@@ -13,7 +13,7 @@ body
     /*animation on body load*/
     animation-name: onLoad;
     animation-iteration-count: 1;
-    animation-timing-function: ease-in;
+    animation-timing-function: ease;
     animation-duration: 0.8s;
 }
 
