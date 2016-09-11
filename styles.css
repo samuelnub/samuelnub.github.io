@@ -39,6 +39,12 @@ img
     transition: all 0.2s ease-in-out;
 }
 
+h2
+{
+    word-wrap: break-word;
+    width: 40%;
+}
+
 img:hover
 {
     transform: scale(1.1);
