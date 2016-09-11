@@ -8,7 +8,7 @@ body
     background-attachment: scroll;
     color: white;
     font-family: 'Segoe UI';
-    text-shadow: 0px 2px 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 0px 4px 4px rgba(0,0,0,0.5);
 
     /*animation on body load*/
     animation-name: onLoad;
