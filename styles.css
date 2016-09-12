@@ -41,6 +41,8 @@ img
 
 h2
 {
+    position: absolute;
+    left: 50%;
     text-align: center;
     word-wrap: break-word;
     width: 40%;
