@@ -8,7 +8,7 @@ body
     background-attachment: scroll;
     color: white;
     font-family: 'Segoe UI';
-    text-shadow: 0px 4px 4px rgba(0,0,0,0.5);
+    text-shadow: 0px 4px 8px rgba(0,0,0,0.5);
 
     /*lazy sneaky doohicky to get rid of ugly scrollbar (just disables scrolling)*/
     overflow-y: hidden;
@@ -18,7 +18,7 @@ body
     animation-name: onLoad;
     animation-iteration-count: 1;
     animation-timing-function: ease;
-    animation-duration: 0.8s;
+    animation-duration: 1s;
 }
 
 @keyframes onLoad
@@ -26,7 +26,7 @@ body
     0%
     {
         opacity: 0;
-        transform: translateY(-512px);
+        transform: translateY(-1024px);
     }
 
     100%
@@ -65,4 +65,27 @@ img:active
 {
     transform: scale(0.9);
     box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5);
+}
+
+a
+{
+    position: relative;
+    color: white;
+    transition: all 0.1s ease-in-out;
+    padding: 2px;
+    border: 4px solid rgba(255,255,255,0.5);
+    text-decoration: none;
+}
+
+a:hover
+{
+    text-shadow: 0px 8px 16px rgba(0,0,0,0.5);
+    padding: 6px;
+    border: 4px solid rgba(255,255,255,1);
+}
+
+a:active 
+{
+    text-shadow: 0px 2px 2px rgba(0,0,0,0.5);
+    padding: 0px;
 }
