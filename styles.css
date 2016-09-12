@@ -39,6 +39,16 @@ img
     transition: all 0.2s ease-in-out;
 }
 
+h2
+{
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 40%;
+}
+
 img:hover
 {
     transform: scale(1.1);
