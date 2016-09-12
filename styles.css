@@ -10,7 +10,7 @@ body
     font-family: 'Segoe UI';
     text-shadow: 0px 4px 4px rgba(0,0,0,0.5);
 
-    /*lazy sneaky doohicky to get rid of ugly scrollbar*/
+    /*lazy sneaky doohicky to get rid of ugly scrollbar (just disables scrolling)*/
     overflow-y: hidden;
     overflow-x: hidden;
 
@@ -36,15 +36,9 @@ body
     }
 }
 
-img
+div
 {
-    border-radius: 128px;
-    box-shadow: 0px 8px 8px rgba(0,0,0,0.5);
-    transition: all 0.2s ease-in-out;
-}
-
-h2
-{
+    padding: 4%;
     position: absolute; 
     left: 0; 
     right: 0; 
@@ -53,9 +47,22 @@ h2
     width: 40%;
 }
 
+img
+{
+    border-radius: 128px;
+    box-shadow: 0px 8px 8px rgba(0,0,0,0.5);
+    transition: all 0.1s ease-in-out;
+}
+
 img:hover
 {
     transform: scale(1.1);
     border-radius: 0px;
     box-shadow: 0px 32px 32px 4px rgba(0,0,0,0.5);
+}
+
+img:active 
+{
+    transform: scale(0.9);
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5);
 }
