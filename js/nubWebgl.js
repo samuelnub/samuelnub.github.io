@@ -5,15 +5,17 @@ var renderer = new THREE.WebGLRenderer({alpha: true, antialias: true});
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
+var blueColor = 0x9cb5d4;
+
 var geometry = new THREE.TorusKnotGeometry(1, 0.32, 256, 32);
 var material = new THREE.MeshLambertMaterial({color: 0xffffff, wireframe: false});
 var object = new THREE.Mesh(geometry, material);
 var object2 = new THREE.Mesh(geometry, material);
 var object3 = new THREE.Mesh(geometry, material);
 
-var pointLight = new THREE.PointLight(0x9cb5d4, 2, 0.5);
+var pointLight = new THREE.PointLight(blueColor, 2, 0.5);
 var dirLight = new THREE.HemisphereLight(0xfefeff, 0.01);
-var dirLight2 = new THREE.HemisphereLight(0x9cb5d4, 1);
+var dirLight2 = new THREE.HemisphereLight(blueColor, 1);
 
 pointLight.position.set(0,0,0);
 
@@ -92,4 +94,6 @@ function onWindowResize()
 var showWhatObject = false;
 exports.showWhatObject = showWhatObject;
 exports.spongeObj = spongeObj;
+exports.dirLight2 = dirLight2;
+exports.blueColor = blueColor;
 exports.scene = scene;
