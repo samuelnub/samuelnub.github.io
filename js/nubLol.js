@@ -21,6 +21,9 @@ var originalImgSrc = document.getElementById("samnubImg").getAttribute("src");
 var titleElement = document.getElementById("title");
 var originalTitleText = document.getElementById("title").innerHTML;
 
+var backgroundElement = document.getElementById("background");
+var originalBackgroundSrc = document.getElementById("background").style.backgroundImage;
+
 function onWhatClick()
 {
     if(showWhatObject == true)
@@ -35,6 +38,7 @@ function onWhatClick()
 
         imgElement.setAttribute("src", originalImgSrc);
         titleElement.innerHTML = originalTitleText;
+        backgroundElement.style.backgroundImage = originalBackgroundSrc;
     }
     else
     {
@@ -46,5 +50,6 @@ function onWhatClick()
         //*sigh* this'll do'
         imgElement.setAttribute("src", "http://i.imgur.com/LO6Ky8V.png");
         titleElement.innerHTML = "THEY'RE SELLING CHOCOLATES";
+        backgroundElement.style.backgroundImage = "url('http://i.imgur.com/LHoDYS5.jpg')";
     }
 };
