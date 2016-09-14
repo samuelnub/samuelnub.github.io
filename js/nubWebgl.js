@@ -90,7 +90,7 @@ var render = function()
         object3.scale.set(rand,rand,rand);
 
         camera.rotation.z += rand * 0.01;
-        camera.fov -= camera.fov * 0.001;
+        camera.fov -= camera.fov * (0.001 * rand);
         camera.updateProjectionMatrix();
     }
 
