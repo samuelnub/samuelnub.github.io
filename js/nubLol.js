@@ -18,6 +18,9 @@ function onGithubClick()
 var imgElement = document.getElementById("samnubImg");
 var originalImgSrc = document.getElementById("samnubImg").getAttribute("src");
 
+var titleElement = document.getElementById("title");
+var originalTitleText = document.getElementById("title").innerHTML;
+
 function onWhatClick()
 {
     if(showWhatObject == true)
@@ -31,6 +34,7 @@ function onWhatClick()
         camera.rotation.z = 0;
 
         imgElement.setAttribute("src", originalImgSrc);
+        titleElement.innerHTML = originalTitleText;
     }
     else
     {
@@ -41,5 +45,6 @@ function onWhatClick()
 
         //*sigh* this'll do'
         imgElement.setAttribute("src", "http://i.imgur.com/LO6Ky8V.png");
+        titleElement.innerHTML = "THEY'RE SELLING CHOCOLATES";
     }
 };
