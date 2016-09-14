@@ -1,5 +1,6 @@
 var scene = new THREE.Scene();
-var camera = new THREE.PerspectiveCamera(4, window.innerWidth / window.innerHeight, 0.1, 1000);
+var camFOV = 4;
+var camera = new THREE.PerspectiveCamera(camFOV, window.innerWidth / window.innerHeight, 0.1, 1000);
 // Give it the alpha param, to allow a transparent canvas/background
 var renderer = new THREE.WebGLRenderer({alpha: true, antialias: true});
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -29,7 +30,8 @@ scene.add(pointLight);
 scene.add(dirLight);
 scene.add(dirLight2);
 
-camera.position.z = 56;
+var camPosZ = 56;
+camera.position.z = camPosZ;
 
 object.rotation.x = Math.random() * (360 - 0) + 0;
 object2.rotation.y = Math.random() * (360 - 0) + 0;
@@ -80,6 +82,16 @@ var render = function()
         //behold, the jittering box of doom...?
         spongeObj.rotation.x += Math.random() * (0.05 - -0.03) + -0.03;
         spongeObj.rotation.y += Math.random() * (0.05 - -0.03) + -0.03;
+
+        var rand = Math.random() * (1.01 - 0.99) + 0.99;
+        spongeObj.scale.set(rand,rand,rand);
+        object.scale.set(rand,rand,rand);
+        object2.scale.set(rand,rand,rand);
+        object3.scale.set(rand,rand,rand);
+
+        camera.rotation.z += rand * 0.01;
+        camera.fov -= camera.fov * 0.001;
+        camera.updateProjectionMatrix();
     }
 
     renderer.render(scene, camera);
@@ -103,4 +115,7 @@ exports.showWhatObject = showWhatObject;
 exports.spongeObj = spongeObj;
 exports.dirLight2 = dirLight2;
 exports.blueColor = blueColor;
+exports.camFOV = camFOV;
+exports.camPosZ = camPosZ;
+exports.camera = camera;
 exports.scene = scene;
